@@ -1,0 +1,460 @@
+// font-family: 'Aguafina Script', cursive;
+// font-family: 'Marck Script', cursive;
+@mixin flex{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin center{
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin size{
+    width: 100%;
+    height: 100%;
+}
+
+@mixin gold{
+    background: $gold;
+    width: 100%;
+    height: 4px;
+}
+
+$red : #DC0017;
+$blue : #113681;
+$gold : #D3B54A;
+
+body{
+    margin: 0;
+    @include size();
+    font-family: 'Marck Script', cursive;
+}
+
+h3{
+    font-size: 2rem;
+    font-family: 'Aguafina Script', cursive;
+    font-weight: 200;
+    position: absolute;
+}
+
+nav{
+    width: 100%;
+    height: auto;
+    @include flex();
+    @include center();
+    position: fixed;
+    z-index: 2;
+    display: none;
+    margin-top: 30px;
+    animation: opace 1s forwards;
+    .nav{
+        position: fixed;
+        height: 2%;
+        width: 100%;
+        @include flex();
+        @include center();
+        top: 0;
+        margin: 100px 0;
+        img{
+            width: 100px;
+            height: auto;
+            position: absolute;
+        }
+        .sb{
+            width: 100%;
+            height: 50%;
+            background: $blue;
+        }
+        .sr{
+            @extend .sb;
+            background: $red;
+        }
+    }
+    .link{
+        position: absolute;
+        height: 2%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .left{
+            width: 50%;
+            height: 100%;
+            @include flex();
+            a{
+                margin: 10px;
+                text-decoration: 0;
+                color: $gold;
+                font-family: 'Aguafina Script', cursive;
+                font-size: 2rem;
+            }
+        }
+        .right{
+          right: 0;
+          position: absolute;
+          @include flex();
+          a{
+            margin: 10px;
+            text-decoration: 0;
+            color: $gold;
+            font-family: 'Aguafina Script', cursive;
+            font-size: 2rem;
+          }
+        }
+    }
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    @include flex();
+    @include center();
+    .red{
+        color: $gold;
+        width: 100%;
+        height: 20px;
+        display: flex;
+        @include center();
+        background: $red;
+        animation: header 5s forwards;
+        span{
+            opacity: 0;
+            animation: opace 1s forwards 5s;
+        }
+    }
+    .blue{
+        @extend .red;
+        background: $blue;
+    }
+}
+
+@keyframes header{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes opace{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+main{
+    @include size();
+    @include flex();
+    display: none;
+    animation: opace 1s forwards;
+    .profil{
+        @include size();
+        @include center();
+        @include flex();
+        .gold{
+            @include flex();
+            @include center();
+            @include gold();
+            margin: 250px 0 50px;
+        }
+    
+        .lr{
+            width: 90%;
+            height: 100%;
+            border: solid $red 2px;
+            font-family: 'Marck Script', cursive;
+            color: $red;
+            font-size: 1.2rem;
+            padding: 10px;
+            border-radius: 5px;
+            @include flex();
+            a{
+                right: 10px;
+                position: absolute;
+                margin-top: 500px;
+                text-decoration: 0;
+                border: $gold solid 2px;
+                padding: 5px;
+                color: black;
+            }
+            img{
+                width: 100px;
+                height: auto;
+                margin: 10px;
+                border-radius: 10px;
+            }
+            .top{
+                top: 0;
+                display: flex;
+                @include center();
+            }
+            .middle{
+                display: flex;
+                width: 80%;
+            }
+            .bottom{
+                @include flex();
+                width: 50%;
+            }
+        }
+        .lb{
+            border: $blue 2px solid;
+            padding: 5px;
+            position: relative;
+            bottom: -20vh;
+            right: 0;
+            width: 40%;
+            height: auto;
+            margin: 20px;
+            background: white;
+            border-radius: 5px;
+            @include flex();
+            color: $blue;
+        }
+    }
+    .competences{
+        margin: 200px 0 50px;
+        width: 100%;
+        height: auto;
+        @include center();
+        @include flex();
+        .gold{
+           @include gold();
+           @include center();
+           display: flex;
+        }
+        .swiper {
+            width: 90%;
+            height: 500px;
+            margin: 50px;
+
+            .swiper-button-next{
+                color: $blue;
+            }
+            .swiper-button-prev{
+                color: $red
+            }
+            .swiper-slide{
+                @include center();
+                @include size();
+                @include flex();
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                    height: auto;
+                }
+                .logo{
+                    top: 0;
+                    display: flex;
+                    position: absolute;
+                    width: 100px;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .projets{
+       @include size();
+        @include center();
+        @include flex();
+        .gold{
+            @include gold();
+            @include center();
+            display: flex;
+        }
+        .frame{
+            @include size();
+            @include flex();
+            @include center();
+            margin: 50px;
+            .fr{
+                cursor: pointer;
+                margin: 10px;
+                width: 300px;
+                height: 300px;
+                border: $red solid 2px;
+                @include flex();
+                @include center();
+                animation: box 1s infinite;
+                .fb{
+                    width: 285px;
+                    height: 285px;
+                    border: $blue solid 2px;
+                    padding: 2px;
+                    display: flex;
+                    .demo{
+                        width: 50px;
+                        height: auto;
+                        position: absolute;
+                        margin-left: 250px;
+                        display: none;
+                        animation: demo 2s forwards;
+                    }
+                    .demo.active{
+                        display: block;
+                    }
+                    img{
+                        @include size();
+                        object-fit: cover;
+                    }
+                }
+                .txt{
+                    display: none;
+                }
+                .txt.active{
+                    padding: 5px;
+                    display: block;
+                    animation: txt 3s forwards;
+                }
+            }
+        }
+    }
+}
+
+.contact{
+    width: 100%;
+    height: 100%;
+    @include center();
+    @include flex();
+    
+    img{
+        width: 50px;
+        margin: 10px;
+    }
+    .gold{
+        @include gold();
+        @include center();
+        display: flex;
+    }
+    .dor{
+        cursor: pointer;
+        margin: 50px;
+        @include flex();
+        @include center();
+        width: 80%;
+        height: 200px;
+        border: $red solid 2px;
+        .dob{
+            width: 90%;
+            height: 180px;
+            border: solid $blue 2px;
+            display: flex;
+            @include center();
+        }
+    }
+    .cr{
+        border: $red solid 2px;
+        @include flex();
+        @include center();
+        width: 90%;
+        height: auto;
+        padding: 2px;
+        display: none;
+        margin: 50px;
+        img{
+            width: 20px;
+            cursor: pointer;
+        }
+        .cb{
+            width: 89%;
+            height: auto;
+            margin: 20px;
+            border: $blue solid 2px;
+            form{
+                @include flex();
+                @include center();
+                @include size();
+                background: $gold;
+            }
+        }
+    }
+}
+.cr.vue{
+    display: block;
+    animation: form 1s forwards;
+}
+
+@keyframes form {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 90%;
+    }
+}
+
+@keyframes demo{
+    from{
+        margin-left: 0;
+        opacity: 0;
+    }
+    to{
+        margin-left: 250px;
+        opacity: 1;
+    }
+}
+
+@keyframes txt{
+    from{
+        opacity: 0;
+        margin-top: -200px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@keyframes box{
+    from{
+        box-shadow: black 0px 0px 10px;
+    }
+    to{
+        box-shadow: black 0;
+    }
+}
+
+
+
+
+
+
+
+
+@media (min-width : 792px){
+    nav{
+        .link{
+            justify-content: space-between;
+            margin-top: 10px;
+            .left{
+                display: flex;
+                flex-direction: row;
+            }
+            .right{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+
+    main{
+        .profil{
+            .lb{
+                bottom: -5vh;
+            }
+        }
+        .projets{
+            .frame{
+              flex-wrap: wrap;
+              display: flex;
+              flex-direction: row;
+            }
+        }
+    }
+
+}
+

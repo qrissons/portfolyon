@@ -1,0 +1,466 @@
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Marck Script", cursive;
+}
+
+h3 {
+  font-size: 2rem;
+  font-family: "Aguafina Script", cursive;
+  font-weight: 200;
+  position: absolute;
+}
+
+nav {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  display: none;
+  margin-top: 30px;
+  animation: opace 1s forwards;
+}
+nav .nav {
+  position: fixed;
+  height: 2%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  margin: 100px 0;
+}
+nav .nav img {
+  width: 100px;
+  height: auto;
+  position: absolute;
+}
+nav .nav .sb, nav .nav .sr {
+  width: 100%;
+  height: 50%;
+  background: #113681;
+}
+nav .nav .sr {
+  background: #DC0017;
+}
+nav .link {
+  position: absolute;
+  height: 2%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+nav .link .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+nav .link .left a {
+  margin: 10px;
+  -webkit-text-decoration: 0;
+          text-decoration: 0;
+  color: #D3B54A;
+  font-family: "Aguafina Script", cursive;
+  font-size: 2rem;
+}
+nav .link .right {
+  right: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+nav .link .right a {
+  margin: 10px;
+  -webkit-text-decoration: 0;
+          text-decoration: 0;
+  color: #D3B54A;
+  font-family: "Aguafina Script", cursive;
+  font-size: 2rem;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .red, header .blue {
+  color: #D3B54A;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #DC0017;
+  animation: header 5s forwards;
+}
+header .red span, header .blue span {
+  opacity: 0;
+  animation: opace 1s forwards 5s;
+}
+header .blue {
+  background: #113681;
+}
+
+@keyframes header {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes opace {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  display: none;
+  animation: opace 1s forwards;
+}
+main .profil {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+main .profil .gold {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #D3B54A;
+  width: 100%;
+  height: 4px;
+  margin: 250px 0 50px;
+}
+main .profil .lr {
+  width: 90%;
+  height: 100%;
+  border: solid #DC0017 2px;
+  font-family: "Marck Script", cursive;
+  color: #DC0017;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+main .profil .lr a {
+  right: 10px;
+  position: absolute;
+  margin-top: 500px;
+  -webkit-text-decoration: 0;
+          text-decoration: 0;
+  border: #D3B54A solid 2px;
+  padding: 5px;
+  color: black;
+}
+main .profil .lr img {
+  width: 100px;
+  height: auto;
+  margin: 10px;
+  border-radius: 10px;
+}
+main .profil .lr .top {
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .profil .lr .middle {
+  display: flex;
+  width: 80%;
+}
+main .profil .lr .bottom {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+main .profil .lb {
+  border: #113681 2px solid;
+  padding: 5px;
+  position: relative;
+  bottom: -20vh;
+  right: 0;
+  width: 40%;
+  height: auto;
+  margin: 20px;
+  background: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  color: #113681;
+}
+main .competences {
+  margin: 200px 0 50px;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+main .competences .gold {
+  background: #D3B54A;
+  width: 100%;
+  height: 4px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+main .competences .swiper {
+  width: 90%;
+  height: 500px;
+  margin: 50px;
+}
+main .competences .swiper .swiper-button-next {
+  color: #113681;
+}
+main .competences .swiper .swiper-button-prev {
+  color: #DC0017;
+}
+main .competences .swiper .swiper-slide {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main .competences .swiper .swiper-slide img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
+}
+main .competences .swiper .swiper-slide .logo {
+  top: 0;
+  display: flex;
+  position: absolute;
+  width: 100px;
+  height: auto;
+}
+main .projets {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+main .projets .gold {
+  background: #D3B54A;
+  width: 100%;
+  height: 4px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+main .projets .frame {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+main .projets .frame .fr {
+  cursor: pointer;
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+  border: #DC0017 solid 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: box 1s infinite;
+}
+main .projets .frame .fr .fb {
+  width: 285px;
+  height: 285px;
+  border: #113681 solid 2px;
+  padding: 2px;
+  display: flex;
+}
+main .projets .frame .fr .fb .demo {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  margin-left: 250px;
+  display: none;
+  animation: demo 2s forwards;
+}
+main .projets .frame .fr .fb .demo.active {
+  display: block;
+}
+main .projets .frame .fr .fb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .projets .frame .fr .txt {
+  display: none;
+}
+main .projets .frame .fr .txt.active {
+  padding: 5px;
+  display: block;
+  animation: txt 3s forwards;
+}
+
+.contact {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.contact img {
+  width: 50px;
+  margin: 10px;
+}
+.contact .gold {
+  background: #D3B54A;
+  width: 100%;
+  height: 4px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.contact .dor {
+  cursor: pointer;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 200px;
+  border: #DC0017 solid 2px;
+}
+.contact .dor .dob {
+  width: 90%;
+  height: 180px;
+  border: solid #113681 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .cr {
+  border: #DC0017 solid 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: auto;
+  padding: 2px;
+  display: none;
+  margin: 50px;
+}
+.contact .cr img {
+  width: 20px;
+  cursor: pointer;
+}
+.contact .cr .cb {
+  width: 89%;
+  height: auto;
+  margin: 20px;
+  border: #113681 solid 2px;
+}
+.contact .cr .cb form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #D3B54A;
+}
+
+.cr.vue {
+  display: block;
+  animation: form 1s forwards;
+}
+
+@keyframes form {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+@keyframes demo {
+  from {
+    margin-left: 0;
+    opacity: 0;
+  }
+  to {
+    margin-left: 250px;
+    opacity: 1;
+  }
+}
+@keyframes txt {
+  from {
+    opacity: 0;
+    margin-top: -200px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+@keyframes box {
+  from {
+    box-shadow: black 0px 0px 10px;
+  }
+  to {
+    box-shadow: black 0;
+  }
+}
+@media (min-width: 792px) {
+  nav .link {
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  nav .link .left {
+    display: flex;
+    flex-direction: row;
+  }
+  nav .link .right {
+    display: flex;
+    flex-direction: row;
+  }
+  main .profil .lb {
+    bottom: -5vh;
+  }
+  main .projets .frame {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=style.css.map */

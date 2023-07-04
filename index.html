@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="description" content="Portfolio de Quentin Rissons developpeur web et web mobile, à distance ou dans les régions de l'Ain, du Jura et Rhône-alpes">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Marck+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+    <script src="app.js" defer></script>
+    <title>Portfolyon</title>
+</head>
+<body>
+
+    <header>
+        <div class="red"><span>Quentin Rissons</span></div>
+        <div class="blue"><span>Developpeur Web</span></div>
+    </header>
+
+    <nav>
+        <div class="nav">
+            <img src="images/Group 37.png" alt="">
+            <div class="sb"></div>
+            <div class="sr"></div>
+        </div>
+        
+        <div class="link">
+            <div class="left">
+                <a href="#profil">Profil</a>
+                <a href="#competences">Compétences</a>
+            </div>
+            <div class="right">
+                <a href="#projets">Projets</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <a id="profil"></a>
+        <div class="profil">
+            <div class="gold"><h3>Profil</h3></div>
+            
+            <div class="lr">
+                <p class="top"><img src="images/moi.jpeg" alt="">Après plusieurs années en restauration et divers types d ’emplois , j’ai choisis de m’orienter vers le developpement web.</p>
+
+                <p class="middle">Orientation que j'ai commencé d'abord en autodidacte, puis via l'école en ligne Studi et ainsi continuer mon apprentissage avec Onlineformapro.</p>
+
+                <p class="bottom">Aujourd’hui j’ai acquis plusieurs compétences comme PHP, JavaScript et bien d’autres.</p>
+                <div class="lb">
+                    <p>Actuellement :</p>
+                    <p>En formation Developpeur web et web mobile</p>
+                    <p>Chez OnlineFormapro.</p>
+                </div>
+                <a href="images/Quentin.pdf" download="">telecharger mon cv</a>
+            </div>
+  
+            
+     
+
+        </div>
+
+        <a id="competences"></a>
+        <div class="competences">
+            <div class="gold"><h3>Compétences</h3></div>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="images/logoHTML.png" alt="" class="logo">
+                    <img src="images/HTML.png" alt="" class="fond">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/logoBOOTSTRAP.png" alt="" class="logo">
+                    <img src="images/BOOTSTRAP.png" alt="" class="fond">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/logosass.png" alt="" class="logo">
+                    <img src="images/SASS.png" alt="" class="fond">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/logocss.png" alt="" class="logo">
+                    <img src="images/CSS.png" alt="" class="fond">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/logoJS.png" alt="" class="logo">
+                    <img src="images/JavaScript.png" alt="" class="fond">
+                </div>
+                </div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+        <a id="projets"></a>
+        <div class="projets">
+            <div class="gold">
+                <h3>Projets</h3>
+            </div>
+
+            <div class="frame">
+
+                <div class="fr" onclick="form(0)">
+                    <div class="fb">
+                        <img src="images/mfigma.png" alt="" class="demo">
+                        <img src="images/pfigma.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <p>Projet Figma, le but était de créer une maquette d'un site web avec plusieur intéractions. 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="fr" onclick="form(1)">
+                    <div class="fb">
+                        <img src="images/mfirst.png" alt="" class="demo">
+                        <img src="images/pfirst.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <p>Première intégration d'une maquette Figma en HTML/CSS en version desktop et mobile.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="fr" onclick="form(2)">
+                    <div class="fb">
+                        <img src="images/pboot.png" alt="" class="demo">
+                        <img src="images/mboot.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <p>Seconde intégration, cette fois avec le Framwork Bootstrap.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="fr" onclick="form(3)">
+                    <div class="fb">
+                        <img src="images/msass.png" alt="" class="demo">
+                        <img src="images/psass.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <p>Nouvelle intégration afin d'utiliser le préprocésseur SASS.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="fr" onclick="form(4)">
+                    <div class="fb">
+                        <img src="images/mmemo.png" alt="" class="demo">
+                        <img src="images/pmemo.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <p>Création d'un Mémory Game afin de se familiariser avec JavaScript. 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="fr" onclick="form(5)">
+                    <div class="fb">
+                        <img src="images/mdesign.png" alt="" class="demo">
+                        <img src="images/pdesign.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <p>Premier projets collectif, le but étant de redesign un site internet en équipe.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+        <a id="contact"></a>
+        <div class="contact">
+            <div class="gold"><h3>Contact</h3></div>
+            <div class="cr">
+                <img src="images/close.png" alt="" onclick="doc()">
+                <div class="cb">
+                    <form action="mailto:qrlcst69@gmail.com" method="get" enctype="text/plain">
+                        <p>Nom : <input type="text" name="name" /></p>
+                        <p>Email : <input type="text" name="email" /></p>
+                        <p>
+                          Message :
+                          <br />
+                          <textarea name="comments" rows="12" cols="35"></textarea>
+                          <br />
+                        </p>
+                  
+                        <p>
+                          <input type="submit" name="submit" value="Envoi" />
+                        </p>
+                      </form>
+                </div>
+            </div>
+            <div class="dor" onclick="doc()">
+                <div class="dob">
+                    <h3>Me contacter</h3>
+                </div>
+            </div>
+           
+
+            <a href="https://github.com/qrissons" target="_blank">
+                <img src="images/github-g60a074171_640.png" alt="">
+            </a>
+            <a href="https://www.linkedin.com/in/quentin-rissons/" target="_blank"><img src="images/linkedin-g769b47dea_640.png" alt="" ></a>
+        </div>
+    </main>
+    
+</body>
+</html>
